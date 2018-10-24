@@ -1,0 +1,30 @@
+<body>
+    <script>
+
+        //TODO: Make fetch frequency configurable in options page
+
+        var fetchFreq = 100000; //how often we update the list (100s)
+        var req; //request object
+        var unreadCount = 0; //how many unread manga we have
+        var mangas; // all currently fetched mangas
+
+        getManga();
+        setInterval(getManga, fetchFreq);
+
+        function getManga(){
+            req = new XMLHttpRequest();
+            req.open('GET', 'kissmanga', true);
+            req.withCredentials = true;
+            //TODO: ensure cookies are used in request
+            //TODO: get cookies from Kissmanga after username and password are set in options
+            //TODO: show login page in popup if user is not logged in
+            req.onload = processManga;
+            req.send();
+        }
+
+        function processManga(){
+            var res = req.responseText;
+        }
+
+    </script>
+</body>

@@ -1,0 +1,15 @@
+{
+	"name": "KissGoodbye",
+	"version": "1.0",
+	"description": "A manga update tracker for MangaDex via KissManga",
+	"icons" : {"128": "icon.png"},
+	"browser_action": {
+		"default_icon": "browseraction.png",
+		"default_title": "KissGoodbye",
+		"popup": "popup.html"
+	}
+	"permissions": [
+		"http://kissmanga.com/*",
+		"tabs"
+	]
+}
